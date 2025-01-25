@@ -1,0 +1,6 @@
+@use '../abstracts/paths' as *;
+
+$font-path: map-get($paths, 'fonts');
+
+// Font files and font-face from
+// https://gwfh.mranftl.com/fonts

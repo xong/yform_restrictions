@@ -1,0 +1,23 @@
+package: project
+version: dev
+author: Robert Rupf
+supportpage: https://github.com/xong/yform_restrictions
+
+page:
+  title: YForm-Einschränkung
+  #  perm: admin[]
+  pjax: true
+  icon: rex-icon rex-icon-delete
+  subpages:
+    users:
+      title: 'Benutzer'
+      perm: users[]
+
+# Load project addon late to be sure that
+#   - all other addons are booted before
+#   - the fragments from project addon are always "winning" over other fragment dirs
+#   - language keys of other addons can be overridden
+#   - ...
+#
+# Don't use `load: late` in public addons, rely on redaxo's default order resolution (by dependencies) instead
+load: late
